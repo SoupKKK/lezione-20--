@@ -1,4 +1,4 @@
-
+//animazione header
 window.addEventListener('scroll', function() {
     if (window.scrollY > 200) {
         document.querySelector('header').classList.add('scrolled');
@@ -9,6 +9,8 @@ window.addEventListener('scroll', function() {
     }
 });
 
+
+//animazione M letters
 const ms = document.querySelectorAll('svg text');
 
   function getRandomInt(max) {
