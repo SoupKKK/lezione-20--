@@ -221,6 +221,17 @@ button:hover{
     opacity: 0.7;
 }
 
+.animated-letter {
+    animation: fadeAnimation 2s ease-in-out infinite; /* Modifica la durata e lo stile dell'animazione qui */
+  }
+
+@keyframes fadeAnimation {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  
 
 @media screen and (min-width: 340px) {
     main svg{
