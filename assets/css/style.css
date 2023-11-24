@@ -145,9 +145,10 @@ aside button{
     padding-bottom: 40px;
 }
 .linksAside a{
+    line-height: 200%;
     text-decoration: none;
     padding: 2%;
-    margin: 5px;
+    margin: 15px;
     color: black;
     opacity: 0.5;
 }
@@ -241,6 +242,7 @@ button:hover{
 
 
 @media screen and (min-width: 840px) {
+    
     .mainArticle{
         flex-basis: 47%;
         margin: 10px;
@@ -255,6 +257,9 @@ button:hover{
 
     .mainArticle .text-content p img{
         display: inline;
+        position: relative;
+        left: 51% ;
+        opacity: 0.99;
     }
 }
 
