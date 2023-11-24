@@ -1,0 +1,283 @@
+
+h6 img,  section img{
+    display: inline;
+    width: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+body{
+    font-size: 120%;
+}
+h6{
+    font-size: 90%;
+}
+
+main{
+    font-size: 200%;
+    display: flex;
+}
+
+/*HEADER && NAV && MAIN*/
+
+main h1{
+    margin-top: 90px;
+}
+
+nav ul{
+    margin-right: 120px;
+}
+
+header, main{
+    background-color: orange;
+    border-bottom: 1px solid black;
+    padding: 6%;
+}
+
+header{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    padding: 2% 2% 2% 6%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+
+li{
+    display: inline;
+}
+
+header nav{
+    margin-right: 5%;
+    align-items: flex-end;
+}
+
+nav li{
+    margin: 10px;
+}
+
+nav button{
+    border: none;
+    background-color: transparent;
+}
+
+
+
+.mainButton, main button{
+    padding: 15px;
+    background-color: black;
+    color: white;
+    border-top: 1.5px solid rgba(255, 255, 255, 0.6);
+    border-left: 3px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    border: none;
+}
+
+/*SECTION*/
+
+section, article{
+    margin-left: 2%;
+}
+
+hr{
+    border:  1px solid black;
+    opacity: 0.1;
+}
+
+.mainArticles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mainArticle {
+    display: flex;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.mainArticle h2, .mainArticle h6 {
+    flex: 0 50%;
+    margin: 0;
+}
+
+.mainArticle h2 {
+    margin-right: -40%; 
+}
+
+
+.mainArticle .content {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainArticle h6 {
+    margin-bottom: 0px;
+}
+
+
+.mainArticle .text-content p{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    opacity: 0.3;
+}
+.mainArticle .text-content p span {
+    position: relative; 
+    left: 50%;   
+}
+
+/*ASIDE*/
+aside{
+    padding: 2%;
+}
+aside button{
+    border: 0.5px solid black;
+    background-color: transparent;
+    margin: 5px;
+    padding: 2%;
+}
+.buttonsAside{
+    opacity: 0.5;
+    margin: 20px;
+    border-bottom: 1px solid black;
+    padding-bottom: 40px;
+}
+.linksAside a{
+    text-decoration: none;
+    padding: 2%;
+    margin: 5px;
+    color: black;
+    opacity: 0.5;
+}
+
+/*ARTICLE*/
+article .sideArticles {
+    display: flex;
+    align-items: flex-start; /* Allinea gli elementi in alto */
+    margin: 5%;
+}
+
+article .sideArticles .text {
+    flex: 1; /* Occupa tutto lo spazio disponibile */
+}
+
+article .sideArticles img {
+    margin-left: 10px;
+    max-width: 40%; /* Imposta la larghezza dell'immagine al 30% */
+    align-self: center; /* Allinea l'immagine in alto */
+}
+
+article p{
+    margin-bottom: 15px;
+}
+
+#opacity p{
+    display: inline;
+}
+
+.text p:last-child{
+    opacity: 0.5;
+}
+
+.text span{
+    line-height: 200%;
+    padding: 6px;
+    background-color: grey;
+    border-top: 1.5px solid rgba(255, 255, 255, 0.6);
+    border-left: 3px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    border: none;
+    font-weight: bolder;
+}
+
+.text p:last-child img:nth-child(3){
+   float: right;
+}
+
+
+img{
+    opacity: 0.99 !important;
+}
+
+/*  ANIMATIONS  */
+
+.mainButton, header{
+    transition: background-color 2s ease;
+}
+
+header.scrolled { /*animazione header*/
+    background-color: white; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 10); 
+  }
+.mainButton.scrolled {
+    background-color: green;
+}
+
+button:hover{
+    box-shadow: 0 -2px 8px 0 rgba(255, 255, 255, 1);
+    opacity: 0.7;
+}
+
+
+@media screen and (min-width: 340px) {
+    main svg{
+        display: none;
+    }
+    .mainArticle{
+        flex-basis: 100%;
+    }
+    nav button{
+        display: none;
+    }
+    .mainButton{
+        display: inline;
+    }
+    .mainArticle .text-content p img{
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 840px) {
+    .mainArticle{
+        flex-basis: 47%;
+        margin: 10px;
+    }
+    nav button{
+        display: inline;
+    }
+    .text p:last-child img:nth-child(3){
+        float: none;
+        margin-left: 10%;
+     }    
+
+    .mainArticle .text-content p img{
+        display: inline;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body
+    {
+        font-size: 110%;
+    }
+    main svg{
+        display: inline;
+        margin-top: 10%;
+        margin-left: 150px;
+    }
+    nav ul{
+        margin-right: 100px;
+    }
+   
+    .mainArticle{
+        flex-basis: 30%;
+    }
+   .container{
+    display: flex;
+    flex-direction: row-reverse;
+   }
+}
+
